@@ -1,12 +1,14 @@
-# Solicitar al usuario un número entero positivo
-n = int(input("Introduce un número entero positivo: "))
+## Pedir una cadena de texto al usuario
+cadena = input("Introduce una cadena de texto: ")
 
-# Inicializamos una variable para la suma
-suma = 0
+# Inicializar el contador de vocales en 0
+contador_vocales = 0
 
-# Utilizamos un ciclo 'for' para sumar los primeros n números enteros
-for i in range(1, n + 1):  # El rango va de 1 a n (inclusive)
-    suma += i  # Sumar el valor de i a la variable suma
+# Recorrer cada letra de la cadena
+for letra in cadena:
+    # Comprobar si la letra es una vocal
+    if letra.lower() in 'aeiou':  # Usamos .lower() para manejar mayúsculas y minúsculas
+        contador_vocales += 1  # Aumentar el contador si es una vocal
 
 # Mostrar el resultado
-print(f"La suma de los primeros {n} números enteros es: {suma}")
+print(f"La cantidad de vocales en la cadena es: {contador_vocales}")
