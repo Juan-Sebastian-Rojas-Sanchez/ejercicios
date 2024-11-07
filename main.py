@@ -1,14 +1,12 @@
-## Pedir una cadena de texto al usuario
-cadena = input("Introduce una cadena de texto: ")
+# Solicitar al usuario un número entero positivo
+n = int(input("Introduce un número entero positivo: "))  # El usuario ingresa un número
 
-# Inicializar el contador de vocales en 0
-contador_vocales = 0
+# Inicializamos una variable para  factorial
+factorial = 1  # Comenzamos con 1
 
-# Recorrer cada letra de la cadena
-for letra in cadena:
-    # Comprobar si la letra es una vocal
-    if letra.lower() in 'aeiou':  # Usamos .lower() para manejar mayúsculas y minúsculas
-        contador_vocales += 1  # Aumentar el contador si es una vocal
+# Utilizamos un ciclo 'for' para sumar los primeros n números enteros
+for i in range(1, n + 1):  # El rango va de 1 a n (inclusive)
+    factorial = factorial*i  # calculamos factorial
 
 # Mostrar el resultado
-print(f"La cantidad de vocales en la cadena es: {contador_vocales}")
+print(f"La suma de los primeros {n} números enteros es: {factorial}")
