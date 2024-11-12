@@ -1,11 +1,10 @@
-# Solicitar calificación y si hizo tareas adicionales
-calificacion = float(input("Ingrese la calificación del estudiante: "))
-tareas_adicionales = input("¿El estudiante hizo tareas adicionales? (sí/no): ").lower()
+# Solicitar el número de materias cursadas
+materias = int(input("Ingrese el número de materias cursadas: "))
+creditos_totales = 0
 
-# Calcular bonificación
-if tareas_adicionales == "sí":
-    calificacion_final = min(calificacion * 1.05, 100)
-else:
-    calificacion_final = calificacion
+for i in range(materias):
+    puntaje = float(input(f"Ingrese el puntaje de la materia {i+1}: "))
+    if puntaje >= 60:
+        creditos_totales += 3
 
-print(f"La calificación final es: {calificacion_final}")
+print(f"El número total de créditos es: {creditos_totales}")
