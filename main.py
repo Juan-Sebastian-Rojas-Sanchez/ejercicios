@@ -1,9 +1,11 @@
-edad = int(input("Ingresa la edad: "))
-if 0 <= edad <= 12:
-    print("Niño")
-elif 13 <= edad <= 17:
-    print("Adolescente")
-elif 18 <= edad <= 64:
-    print("Adulto")
+nota = int(input("Ingresa una nota numérica: "))
+if 90 <= nota <= 100:
+    print("A")
+elif 80 <= nota <= 89:
+    print("B")
+elif 70 <= nota <= 79:
+    print("C")
+elif 60 <= nota <= 69:
+    print("D")
 else:
-    print("Anciano")
+    print("F")
