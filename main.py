@@ -1,12 +1,14 @@
-temp = float(input("Ingresa la temperatura: "))
-escala = input("Ingresa la escala (C para Celsius, F para Fahrenheit): ")
+# Solicitar al usuario tres números
+num1 = float(input("Ingrese el primer número: "))
+num2 = float(input("Ingrese el segundo número: "))
+num3 = float(input("Ingrese el tercer número: "))
 
-match escala:
-    case 'C':
-        fahrenheit = (temp * 9/5) + 32
-        print(f"Temperatura en Fahrenheit: {fahrenheit}")
-    case 'F':
-        celsius = (temp - 32) * 5/9
-        print(f"Temperatura en Celsius: {celsius}")
-    case _:
-        print("Escala no válida.")
+# Determinar el mayor de los tres
+if num1 >= num2 and num1 >= num3:
+    mayor = num1
+elif num2 >= num1 and num2 >= num3:
+    mayor = num2
+else:
+    mayor = num3
+
+print(f"El número mayor es: {mayor}")
