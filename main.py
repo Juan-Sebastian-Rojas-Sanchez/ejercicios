@@ -1,10 +1,10 @@
-lado1 = float(input("Ingresa el primer lado del triángulo: "))
-lado2 = float(input("Ingresa el segundo lado del triángulo: "))
-lado3 = float(input("Ingresa el tercer lado del triángulo: "))
+import random
+numero_secreto = random.randint(1, 10)
+intento = int(input("Adivina el número (entre 1 y 10): "))
 
-if lado1 == lado2 == lado3:
-    print("El triángulo es equilátero.")
-elif lado1 == lado2 or lado1 == lado3 or lado2 == lado3:
-    print("El triángulo es isósceles.")
+if intento == numero_secreto:
+    print("¡Correcto!")
+elif intento < numero_secreto:
+    print("El número es mayor.")
 else:
-    print("El triángulo es escaleno.")
+    print("El número es menor.")
