@@ -1,16 +1,12 @@
-# Solicitar salario bruto y país de residencia
-salario_bruto = float(input("Ingrese su salario bruto: "))
-pais = input("Ingrese su país de residencia (País A, País B, País C): ")
+# Solicitar distancia y velocidad
+distancia = float(input("Ingrese la distancia a recorrer en km: "))
+velocidad = float(input("Ingrese la velocidad promedio en km/h: "))
 
-# Aplicar impuestos según el país
-if pais == "País A":
-    impuesto = 0.20
-elif pais == "País B":
-    impuesto = 0.15
-elif pais == "País C":
-    impuesto = 0.10
-else:
-    impuesto = 0.25
+# Calcular tiempo en horas y minutos
+tiempo_horas = distancia // velocidad
+tiempo_minutos = (distancia % velocidad) * 60 / velocidad
 
-salario_neto = salario_bruto * (1 - impuesto)
-print(f"Su salario neto es: {salario_neto}")
+if velocidad > 120:
+    print("Advertencia: La velocidad es mayor a 120 km/h.")
+
+print(f"El tiempo de viaje es aproximadamente {int(tiempo_horas)} horas y {int(tiempo_minutos)} minutos.")
