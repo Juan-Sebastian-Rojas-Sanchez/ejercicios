@@ -1,5 +1,9 @@
-year = int(input("Ingresa un año: "))
-if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
-    print("Es un año bisiesto.")
+edad = int(input("Ingresa la edad: "))
+if 0 <= edad <= 12:
+    print("Niño")
+elif 13 <= edad <= 17:
+    print("Adolescente")
+elif 18 <= edad <= 64:
+    print("Adulto")
 else:
-    print("No es un año bisiesto.")
+    print("Anciano")
