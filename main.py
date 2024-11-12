@@ -10,4 +10,3 @@ match escala:
         print(f"Temperatura en Celsius: {celsius}")
     case _:
         print("Escala no válida.")
-
