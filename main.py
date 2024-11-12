@@ -1,5 +1,5 @@
-num = int(input("Ingresa un número: "))
-if num % 2 == 0:
-    print("El número es par.")
+nota = int(input("Ingresa una calificación: "))
+if nota >= 60:
+    print("Aprobado")
 else:
-    print("El número es impar.")
+    print("Reprobado")
