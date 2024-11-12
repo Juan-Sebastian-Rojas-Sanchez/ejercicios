@@ -1,7 +1,5 @@
-num = int(input("Ingresa un número: "))
-if num > 0:
-    print("El número es positivo.")
-elif num < 0:
-    print("El número es negativo.")
+year = int(input("Ingresa un año: "))
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print("Es un año bisiesto.")
 else:
-    print("El número es cero.")
+    print("No es un año bisiesto.")
