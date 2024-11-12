@@ -1,11 +1,13 @@
-nota = int(input("Ingresa una nota numérica: "))
-if 90 <= nota <= 100:
-    print("A")
-elif 80 <= nota <= 89:
-    print("B")
-elif 70 <= nota <= 79:
-    print("C")
-elif 60 <= nota <= 69:
-    print("D")
-else:
-    print("F")
+temp = float(input("Ingresa la temperatura: "))
+escala = input("Ingresa la escala (C para Celsius, F para Fahrenheit): ")
+
+match escala:
+    case 'C':
+        fahrenheit = (temp * 9/5) + 32
+        print(f"Temperatura en Fahrenheit: {fahrenheit}")
+    case 'F':
+        celsius = (temp - 32) * 5/9
+        print(f"Temperatura en Celsius: {celsius}")
+    case _:
+        print("Escala no válida.")
+
