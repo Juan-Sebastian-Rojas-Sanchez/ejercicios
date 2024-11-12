@@ -1,14 +1,16 @@
-# Solicitar al usuario tres números
-num1 = float(input("Ingrese el primer número: "))
-num2 = float(input("Ingrese el segundo número: "))
-num3 = float(input("Ingrese el tercer número: "))
+# Solicitar salario bruto y país de residencia
+salario_bruto = float(input("Ingrese su salario bruto: "))
+pais = input("Ingrese su país de residencia (País A, País B, País C): ")
 
-# Determinar el mayor de los tres
-if num1 >= num2 and num1 >= num3:
-    mayor = num1
-elif num2 >= num1 and num2 >= num3:
-    mayor = num2
+# Aplicar impuestos según el país
+if pais == "País A":
+    impuesto = 0.20
+elif pais == "País B":
+    impuesto = 0.15
+elif pais == "País C":
+    impuesto = 0.10
 else:
-    mayor = num3
+    impuesto = 0.25
 
-print(f"El número mayor es: {mayor}")
+salario_neto = salario_bruto * (1 - impuesto)
+print(f"Su salario neto es: {salario_neto}")
