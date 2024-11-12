@@ -1,12 +1,11 @@
-# Solicitar distancia y velocidad
-distancia = float(input("Ingrese la distancia a recorrer en km: "))
-velocidad = float(input("Ingrese la velocidad promedio en km/h: "))
+# Solicitar calificación y si hizo tareas adicionales
+calificacion = float(input("Ingrese la calificación del estudiante: "))
+tareas_adicionales = input("¿El estudiante hizo tareas adicionales? (sí/no): ").lower()
 
-# Calcular tiempo en horas y minutos
-tiempo_horas = distancia // velocidad
-tiempo_minutos = (distancia % velocidad) * 60 / velocidad
+# Calcular bonificación
+if tareas_adicionales == "sí":
+    calificacion_final = min(calificacion * 1.05, 100)
+else:
+    calificacion_final = calificacion
 
-if velocidad > 120:
-    print("Advertencia: La velocidad es mayor a 120 km/h.")
-
-print(f"El tiempo de viaje es aproximadamente {int(tiempo_horas)} horas y {int(tiempo_minutos)} minutos.")
+print(f"La calificación final es: {calificacion_final}")
